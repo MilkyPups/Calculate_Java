@@ -1,0 +1,44 @@
+import java.sql.SQLOutput; //Автоматически создалось
+import java.util.Scanner;
+
+//Для этого кейса добавил класс Scanner с выыодом того, что введено с клавиатуры.
+//Для проверки выбранного математического действия в строке использовал оператор switch case.
+
+public class Project {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Введи первое число: ");
+        double a = input.nextDouble();
+        System.out.println("Введи второе число: ");
+        double b = input.nextDouble();
+        System.out.println("Введи действие +, -, /, * ");
+        String action = input.next();
+        double summa = 0;
+        switch(action) {
+            case "+":
+                summa = a + b;
+                break;
+            case "-":
+                summa = a - b;
+                break;
+            case "/":
+                summa = a / b;
+                break;
+            case "*":
+                summa = a * b;
+                break;
+            case "%":
+                summa = a + (a/100*b);
+                break;
+            default:
+                System.out.println("Нет решений");
+                break;
+        }
+        System.out.println(a +""+action+""+b+"="+summa);
+         }
+
+
+
+
+
+    }
